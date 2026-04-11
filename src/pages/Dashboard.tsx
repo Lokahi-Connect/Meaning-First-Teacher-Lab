@@ -8,7 +8,7 @@ export default function Dashboard() {
         <div className="hero-inner">
           <h1>Your certification dashboard</h1>
           <p>
-            Track your progress through the Meaning-First Literacy teacher
+            Track your progress through the Meaning-First Literacy™ teacher
             certification pathway.
           </p>
         </div>
@@ -18,7 +18,7 @@ export default function Dashboard() {
         <div className="principle-block">
           <h2>Certification Status</h2>
           <p>
-            Complete all six modules to earn your Meaning-First Literacy Teacher
+            Complete all six modules to earn your Meaning-First Literacy™ Teacher
             Certification. Modules unlock sequentially as you progress through
             the pathway.
           </p>
