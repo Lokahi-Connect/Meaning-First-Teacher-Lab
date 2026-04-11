@@ -1,8 +1,8 @@
-# Claude Code — Meaning-First Teacher Lab
+# Claude Code — Meaning-First Literacy™ Teacher-Lab
 
 ## Overview
 
-Teacher certification app for Lokahi Connect's Meaning-First Literacy program. Teachers complete six sequential modules covering Structured Word Inquiry to earn certification.
+Teacher certification app for Lokahi Connect's Meaning-First Literacy™ program. Teachers complete six sequential modules covering Structured Word Inquiry to earn certification.
 
 ## Stack
 

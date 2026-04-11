@@ -5,7 +5,7 @@ export default function Registration() {
         <div className="hero-inner">
           <h1>Teacher Certification Registration</h1>
           <p>
-            Register to begin your Meaning-First Literacy teacher certification
+            Register to begin your Meaning-First Literacy™ teacher certification
             journey.
           </p>
           <div className="hero-meta">
