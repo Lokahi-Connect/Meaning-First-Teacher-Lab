@@ -1,8 +1,11 @@
 .nav {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 100;
-  background: var(--teal-deep);
+  background: rgba(13, 90, 138, 0.96);
+  backdrop-filter: blur(8px);
   height: var(--nav-height);
   display: flex;
   align-items: center;
@@ -12,7 +15,7 @@
   width: 100%;
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 1.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -21,30 +24,37 @@
 .nav-brand {
   font-family: var(--font-serif);
   font-size: 1.15rem;
-  color: #fff;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: 0.02em;
+  text-decoration: none;
+}
+
+.nav-brand span {
+  color: var(--seafoam);
 }
 
 .nav-links {
   display: flex;
-  gap: 1.25rem;
+  gap: 1.75rem;
+  align-items: center;
 }
 
 .nav-links a {
-  color: rgba(255, 255, 255, 0.75);
-  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.85rem;
   font-weight: 500;
   text-decoration: none;
-  padding: 0.25rem 0;
-  border-bottom: 2px solid transparent;
-  transition: color 0.15s ease, border-color 0.15s ease;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition: color 0.2s;
 }
 
 .nav-links a:hover {
-  color: #fff;
+  color: var(--seafoam);
   text-decoration: none;
 }
 
 .nav-links a.active {
-  color: #fff;
-  border-bottom-color: var(--amber);
+  color: var(--seafoam);
 }

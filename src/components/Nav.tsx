@@ -5,7 +5,9 @@ export default function Nav() {
   return (
     <nav className="nav">
       <div className="nav-inner">
-        <span className="nav-brand">Meaning-First Literacy™ Teacher-Lab</span>
+        <span className="nav-brand">
+          Lokahi <span>Connect</span> · Teacher Lab
+        </span>
         <div className="nav-links">
           <NavLink to="/" end>
             Dashboard

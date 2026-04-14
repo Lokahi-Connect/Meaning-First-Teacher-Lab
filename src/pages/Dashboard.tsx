@@ -6,10 +6,13 @@ export default function Dashboard() {
     <>
       <section className="hero">
         <div className="hero-inner">
-          <h1>Your certification dashboard</h1>
+          <span className="hero-tag">Teacher Certification</span>
+          <h1>
+            Your <em>Meaning-First</em> Certification Dashboard
+          </h1>
           <p>
             Track your progress through the Meaning-First Literacy™ teacher
-            certification pathway.
+            certification pathway powered by Structured Word Inquiry.
           </p>
         </div>
       </section>
@@ -49,13 +52,10 @@ export default function Dashboard() {
                 {available && (
                   <Link
                     to={`/modules/${mod.id}`}
-                    style={{
-                      display: "inline-block",
-                      marginTop: "0.75rem",
-                      fontWeight: 500,
-                    }}
+                    className="btn-primary"
+                    style={{ marginTop: "1rem" }}
                   >
-                    Start module &rarr;
+                    Start module →
                   </Link>
                 )}
               </div>

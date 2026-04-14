@@ -7,10 +7,10 @@ export default function ModuleView() {
 
   if (!mod) {
     return (
-      <div className="page-wrap" style={{ paddingTop: "2rem" }}>
+      <div className="page-wrap" style={{ paddingTop: "calc(var(--nav-height) + 2rem)" }}>
         <h1>Module not found</h1>
         <p style={{ marginTop: "0.5rem" }}>
-          <Link to="/modules">&larr; Back to modules</Link>
+          <Link to="/modules">← Back to modules</Link>
         </p>
       </div>
     );
@@ -20,6 +20,9 @@ export default function ModuleView() {
     <>
       <section className="hero">
         <div className="hero-inner">
+          <span className="hero-tag">
+            Module {mod.id} of 6
+          </span>
           <h1>{mod.title}</h1>
           <p>{mod.subtitle}</p>
           <div className="hero-meta">
@@ -34,7 +37,7 @@ export default function ModuleView() {
 
       <div className="page-wrap">
         <p style={{ marginBottom: "1rem" }}>
-          <Link to="/modules">&larr; Back to modules</Link>
+          <Link to="/modules">← Back to modules</Link>
         </p>
 
         <div className="card">

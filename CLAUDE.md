@@ -12,26 +12,29 @@ Teacher certification app for Lokahi Connect's Meaning-First Literacy™ program
 
 ## Design System
 
-### Fonts (Google Fonts)
+### Fonts (Google Fonts) — aligned with meaning-first.org
 
 | Token | Family |
 |-------|--------|
 | `--font-sans` | DM Sans |
-| `--font-serif` | DM Serif Display |
+| `--font-serif` | Playfair Display |
 | `--font-mono` | IBM Plex Mono |
 
-### Color Palette
+### Color Palette — aligned with meaning-first.org
 
 | Token | Hex | Usage |
 |-------|-----|-------|
-| `--teal-deep` | #0d4f5c | Nav background, hero sections |
-| `--teal-mid` | #1a7a6e | Links, accents |
-| `--seafoam` | #2a9d8f | Available/published badges |
-| `--amber` | #e8a040 | Principle block accent |
-| `--cream` | #faf8f4 | Page background |
+| `--ocean` | #0D5A8A | Nav background, primary blue |
+| `--sky` | #1A8FC1 | Gradient accents |
+| `--seafoam` | #2EC4A0 | CTA buttons, active links, badges |
+| `--sand` | #F5EFE0 | Alternate section backgrounds |
+| `--dusk` | #E8753A | Warm accent |
+| `--cream` | #FDFAF4 | Page background |
 | `--coral` | #c0392b | Error/warning states |
 | `--border` | #e0dbd2 | Card borders, locked badges |
-| `--ink` | #1a1a1a | Body text |
+| `--ink` | #1A1A2E | Body text |
+| `--muted` | #6B7280 | Secondary text |
+| `--white` | #FFFFFF | Card backgrounds |
 
 ## Project Structure
 
@@ -43,7 +46,7 @@ src/
   modules.ts        # Module data (6 certification modules)
   vite-env.d.ts     # Vite type references
   components/
-    Nav.tsx/.css     # Sticky navigation bar
+    Nav.tsx/.css     # Fixed navigation bar (ocean blue, aligned with meaning-first.org)
     Footer.tsx/.css  # Site footer
   pages/
     Dashboard.tsx    # / — Certification dashboard with module pathway

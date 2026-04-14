@@ -6,6 +6,7 @@ export default function Modules() {
     <>
       <section className="hero">
         <div className="hero-inner">
+          <span className="hero-tag">6-Module Curriculum</span>
           <h1>Certification Modules</h1>
           <p>
             Six modules covering the foundations of Structured Word Inquiry and
@@ -32,25 +33,24 @@ export default function Modules() {
                 {mod.status}
               </span>
             </div>
-            <p style={{ marginBottom: "0.5rem" }}>{mod.subtitle}</p>
+            <p style={{ marginBottom: "0.5rem", color: "var(--ink)", fontWeight: 500 }}>
+              {mod.subtitle}
+            </p>
             <p>{mod.summary}</p>
             {mod.status === "published" ? (
               <Link
                 to={`/modules/${mod.id}`}
-                style={{
-                  display: "inline-block",
-                  marginTop: "0.75rem",
-                  fontWeight: 500,
-                }}
+                className="btn-ocean"
+                style={{ marginTop: "1rem" }}
               >
-                View module &rarr;
+                View module →
               </Link>
             ) : (
               <span
                 style={{
                   display: "inline-block",
                   marginTop: "0.75rem",
-                  color: "#999",
+                  color: "var(--muted)",
                   fontSize: "0.9rem",
                 }}
               >
