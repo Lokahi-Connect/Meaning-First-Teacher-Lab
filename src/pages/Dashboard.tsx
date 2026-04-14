@@ -30,7 +30,7 @@ export default function Dashboard() {
         <h2 style={{ marginBottom: "1rem" }}>Module Pathway</h2>
         <div className="module-grid">
           {modules.map((mod) => {
-            const available = mod.id === 1;
+            const available = mod.status === "published";
             return (
               <div className="card" key={mod.id}>
                 <div

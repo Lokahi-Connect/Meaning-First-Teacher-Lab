@@ -21,7 +21,7 @@ export const modules: Module[] = [
     subtitle: "Morphemes, graphemes, and phonemes in context",
     summary:
       "Learn the key linguistic units that structure English spelling and how they interrelate.",
-    status: "draft",
+    status: "published",
   },
   {
     id: 3,
@@ -29,7 +29,7 @@ export const modules: Module[] = [
     subtitle: "A framework for investigating any word",
     summary:
       "Master the four questions that guide Structured Word Inquiry and apply them to real words.",
-    status: "draft",
+    status: "published",
   },
   {
     id: 4,
@@ -37,7 +37,7 @@ export const modules: Module[] = [
     subtitle: "Understanding spelling conventions",
     summary:
       "Investigate why English words are spelled the way they are through grapheme-phoneme correspondences and orthographic conventions.",
-    status: "draft",
+    status: "published",
   },
   {
     id: 5,
@@ -45,7 +45,7 @@ export const modules: Module[] = [
     subtitle: "Tools for morphological analysis",
     summary:
       "Build fluency with word sums and matrices as tools for understanding word structure and suffixing patterns.",
-    status: "draft",
+    status: "published",
   },
   {
     id: 6,
@@ -53,6 +53,6 @@ export const modules: Module[] = [
     subtitle: "Bringing SWI into the classroom",
     summary:
       "Develop practical strategies for integrating Structured Word Inquiry into daily classroom instruction.",
-    status: "draft",
+    status: "published",
   },
 ];
