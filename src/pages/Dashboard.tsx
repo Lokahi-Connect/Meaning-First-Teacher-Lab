@@ -54,7 +54,7 @@ export default function Dashboard() {
                     className={`badge ${available ? "badge--available" : "badge--locked"}`}
                     style={{ flexShrink: 0 }}
                   >
-                    {available ? "Available" : "Locked"}
+                    {available ? "Available" : "Coming soon"}
                   </span>
                 </div>
                 <p>{mod.summary}</p>

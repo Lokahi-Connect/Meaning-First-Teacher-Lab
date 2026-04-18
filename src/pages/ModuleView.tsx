@@ -126,14 +126,14 @@ export default function ModuleView() {
           <div className="card">
             <h3 style={{ marginBottom: "1rem" }}>What you'll study</h3>
             <ol style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: "0" }}>
-              {mod.sections.map((section) => (
+              {mod.sections.map((section, i) => (
                 <li
                   key={section.section_number}
                   style={{
                     display: "flex",
                     gap: "1rem",
                     padding: "0.9rem 0",
-                    borderBottom: "1px solid var(--border)",
+                    borderBottom: i < mod.sections!.length - 1 ? "1px solid var(--border)" : "none",
                     alignItems: "flex-start",
                   }}
                 >
@@ -165,7 +165,7 @@ export default function ModuleView() {
                       className="badge badge--draft"
                       style={{ marginLeft: "auto", flexShrink: 0, alignSelf: "center" }}
                     >
-                      check
+                      quiz
                     </span>
                   )}
                 </li>
@@ -174,7 +174,7 @@ export default function ModuleView() {
           </div>
         )}
 
-        {/* Assessment gate — only Module 1 has this */}
+        {/* Assessment gate */}
         {mod.assessment && (
           <div className="principle-block">
             <h2>Assessment gate</h2>

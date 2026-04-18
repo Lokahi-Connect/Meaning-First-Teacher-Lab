@@ -18,12 +18,9 @@ export default function Registration() {
       <div className="page-wrap">
         <div className="placeholder-notice">
           <p>
-            The registration form is currently being migrated to this platform.
-          </p>
-          <p style={{ marginTop: "0.75rem" }}>
-            Check back soon or contact{" "}
-            <a href="mailto:info@lokahiconnect.org">info@lokahiconnect.org</a>{" "}
-            for more information.
+            Registration is opening soon. To reserve your place or ask a
+            question, contact{" "}
+            <a href="mailto:info@lokahiconnect.org">info@lokahiconnect.org</a>.
           </p>
         </div>
       </div>

@@ -44,7 +44,7 @@ export default function Modules() {
                 <span
                   className={`badge ${mod.status === "published" ? "badge--published" : "badge--draft"}`}
                 >
-                  {mod.status}
+                  {mod.status === "published" ? "published" : "In development"}
                 </span>
               </div>
             </div>
