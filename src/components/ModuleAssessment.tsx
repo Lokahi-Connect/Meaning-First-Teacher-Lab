@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { moduleAssessments, type AssessmentQuestion } from "../data/assessments";
-import { markModulePassed, getModuleStatus } from "../utils/progress";
+import { markModulePassed, getModuleStatus, saveAssessmentResult } from "../utils/progress";
 
 interface Props {
   moduleNumber: number;
@@ -56,6 +56,14 @@ export default function ModuleAssessment({ moduleNumber, onPassed }: Props) {
     const finalScore = getScore(questions, answers, selfAssessed);
     setScore(finalScore);
     setSubmitted(true);
+    saveAssessmentResult(moduleNumber, {
+      score: finalScore,
+      total: questions.length,
+      passed: finalScore >= passingScore,
+      completedAt: new Date().toISOString(),
+      answers: { ...answers },
+      selfAssessed: { ...selfAssessed },
+    });
     if (finalScore >= passingScore) {
       markModulePassed(moduleNumber);
       onPassed();

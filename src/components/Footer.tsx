@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Footer.css";
 
 export default function Footer() {
@@ -22,6 +23,14 @@ export default function Footer() {
             </a>{" "}
             &middot;{" "}
             <a href="mailto:info@lokahiconnect.org">info@lokahiconnect.org</a>
+          </p>
+          <p style={{ marginTop: "0.35rem" }}>
+            <Link
+              to="/admin"
+              style={{ fontSize: "0.75rem", color: "inherit", opacity: 0.45 }}
+            >
+              Admin
+            </Link>
           </p>
         </div>
       </div>

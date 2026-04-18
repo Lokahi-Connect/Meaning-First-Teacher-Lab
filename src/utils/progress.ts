@@ -4,8 +4,18 @@ export interface ProgressMap {
   [moduleNumber: string]: ModuleStatus;
 }
 
+export interface AssessmentResult {
+  score: number;
+  total: number;
+  passed: boolean;
+  completedAt: string; // ISO-8601
+  answers: Record<string, string>; // questionId → answer
+  selfAssessed: Record<string, boolean>; // questionId → self-assessed correct
+}
+
 const PROGRESS_KEY = "mfl_progress";
 const PRACTICE_KEY = "mfl_practice";
+const ASSESSMENT_KEY = "mfl_assessments";
 const TOTAL_MODULES = 6;
 
 export function getProgress(): ProgressMap {
@@ -75,6 +85,36 @@ export function savePracticeAnswer(key: string, value: string): void {
     const answers = getPracticeAnswers();
     answers[key] = value;
     localStorage.setItem(PRACTICE_KEY, JSON.stringify(answers));
+  } catch {
+    // ignore
+  }
+}
+
+export function getAssessmentResults(): Record<string, AssessmentResult> {
+  try {
+    const raw = localStorage.getItem(ASSESSMENT_KEY);
+    if (raw) return JSON.parse(raw) as Record<string, AssessmentResult>;
+  } catch {
+    // ignore
+  }
+  return {};
+}
+
+export function saveAssessmentResult(moduleNumber: number, result: AssessmentResult): void {
+  try {
+    const results = getAssessmentResults();
+    results[String(moduleNumber)] = result;
+    localStorage.setItem(ASSESSMENT_KEY, JSON.stringify(results));
+  } catch {
+    // ignore
+  }
+}
+
+export function clearAllData(): void {
+  try {
+    localStorage.removeItem(PROGRESS_KEY);
+    localStorage.removeItem(PRACTICE_KEY);
+    localStorage.removeItem(ASSESSMENT_KEY);
   } catch {
     // ignore
   }
