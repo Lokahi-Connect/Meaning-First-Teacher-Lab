@@ -9,7 +9,7 @@ export interface ModuleAssessment {
   question_count: number;
   passing_score: number;
   passing_percentage: number;
-  question_types: ("multiple-choice" | "true-false" | "word-bank")[];
+  question_types: ("multiple-choice" | "true-false" | "short-answer")[];
   gates_reflection?: boolean;
 }
 

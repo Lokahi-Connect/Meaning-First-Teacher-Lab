@@ -96,7 +96,7 @@
     "question_count": 10,
     "passing_score": 8,
     "passing_percentage": 80,
-    "question_types": ["multiple-choice", "true-false", "word-bank"],
+    "question_types": ["multiple-choice", "true-false", "short-answer"],
     "gates_reflection": true
   },
   "gate_criteria": [

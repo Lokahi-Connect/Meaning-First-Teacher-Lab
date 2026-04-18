@@ -93,6 +93,19 @@
       "has_comprehension_check": true
     }
   ],
+  "assessment": {
+    "question_count": 10,
+    "passing_score": 8,
+    "passing_percentage": 80,
+    "question_types": ["multiple-choice", "true-false", "short-answer"],
+    "gates_reflection": true
+  },
+  "gate_criteria": [
+    "Word sums are proposed as hypotheses and verified by checking that each element carries its meaning in the word",
+    "Replace, Double, Change, and Toggle are applied correctly using their stated conditions — not guessed",
+    "The Check the Joins! procedure is applied systematically at every morpheme boundary",
+    "The plural suffix is identified as <-s> in all cases; <-es> is explained as an orthographic boundary outcome, not a separate suffix"
+  ],
   "tags": [
     "word-sums",
     "matrices",
@@ -104,7 +117,7 @@
     "Toggle",
     "tools"
   ],
-  "status": "draft",
+  "status": "published",
   "version": "0.2.0",
   "created_at": "2026-04-07T00:00:00Z",
   "updated_at": "2026-04-17T00:00:00Z"

@@ -1,6 +1,3 @@
-// Source of truth: lokahi-connect/Meaning-First-Literacy
-// data/teacher-training/*.json
-// To sync: copy updated JSON files from that repo into src/data/
 import type { Module } from "./types/module";
 import mod1 from "./data/tt_module_1_paradigm_shift.json";
 import mod2 from "./data/tt_module_2_units_of_writing_system.json";

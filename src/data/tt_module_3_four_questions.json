@@ -83,6 +83,19 @@
       "has_comprehension_check": true
     }
   ],
+  "assessment": {
+    "question_count": 10,
+    "passing_score": 8,
+    "passing_percentage": 80,
+    "question_types": ["multiple-choice", "true-false", "short-answer"],
+    "gates_reflection": true
+  },
+  "gate_criteria": [
+    "The Four Questions are applied in the correct sequence — meaning before structure before family before grapheme function",
+    "Word sums are treated as testable hypotheses, not displayed facts — each element is checked for stable meaning",
+    "Word family membership is determined by shared base meaning and etymological source, not visual resemblance",
+    "Q4 answers draw explicitly on Q1–Q3 findings — grapheme function is explained morphologically, not just phonologically"
+  ],
   "tags": [
     "four-questions",
     "inquiry",
@@ -90,7 +103,7 @@
     "investigation",
     "routine"
   ],
-  "status": "draft",
+  "status": "published",
   "version": "0.2.0",
   "created_at": "2026-04-07T00:00:00Z",
   "updated_at": "2026-04-17T00:00:00Z"

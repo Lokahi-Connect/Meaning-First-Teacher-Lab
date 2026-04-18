@@ -83,6 +83,19 @@
       "has_comprehension_check": true
     }
   ],
+  "assessment": {
+    "question_count": 10,
+    "passing_score": 8,
+    "passing_percentage": 80,
+    "question_types": ["multiple-choice", "true-false", "short-answer"],
+    "gates_reflection": true
+  },
+  "gate_criteria": [
+    "Positional constraints on graphemes (ck/k, tch/ch) are explained using the principle, not memorized as rules",
+    "Morphological stability is the primary explanation when base spelling persists across phonological environments",
+    "Etymology (French, Greek, Latin) is named as a principled explanatory system, not historical trivia",
+    "No grapheme is described as 'silent' — all are given a function in terms of position, morphology, or etymology"
+  ],
   "tags": [
     "graphemes",
     "orthographic-principles",
@@ -90,7 +103,7 @@
     "etymology",
     "spelling"
   ],
-  "status": "draft",
+  "status": "published",
   "version": "0.2.0",
   "created_at": "2026-04-07T00:00:00Z",
   "updated_at": "2026-04-17T00:00:00Z"

@@ -84,6 +84,19 @@
       "has_comprehension_check": true
     }
   ],
+  "assessment": {
+    "question_count": 10,
+    "passing_score": 8,
+    "passing_percentage": 80,
+    "question_types": ["multiple-choice", "true-false", "short-answer"],
+    "gates_reflection": true
+  },
+  "gate_criteria": [
+    "Guided questions are distinguished from hints and leading questions by what they point toward: a process, not a predetermined answer",
+    "The Four Questions are described as constant across K-12, with word complexity — not the framework — varying by developmental band",
+    "Assumed competence is articulated as a design stance that structures tasks for engagement, not as avoiding correction",
+    "Assessment as consolidation is described in terms of what it requires students to do — explain, apply, investigate — not recall under pressure"
+  ],
   "tags": [
     "classroom-practice",
     "guided-questions",
@@ -93,7 +106,7 @@
     "neurodivergent-informed",
     "developmental-bands"
   ],
-  "status": "draft",
+  "status": "published",
   "version": "0.2.0",
   "created_at": "2026-04-07T00:00:00Z",
   "updated_at": "2026-04-17T00:00:00Z"

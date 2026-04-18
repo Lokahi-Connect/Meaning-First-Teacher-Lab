@@ -83,6 +83,19 @@
       "has_comprehension_check": true
     }
   ],
+  "assessment": {
+    "question_count": 10,
+    "passing_score": 8,
+    "passing_percentage": 80,
+    "question_types": ["multiple-choice", "true-false", "short-answer"],
+    "gates_reflection": true
+  },
+  "gate_criteria": [
+    "Morpheme, grapheme, and phoneme are correctly distinguished and applied — not used interchangeably",
+    "Free and bound bases are identified using the diagnostic question: does this element carry a stable meaning across the family?",
+    "Graphemes are analyzed as letter teams in specific words, not as individual letters with fixed sounds",
+    "Layer collapse errors are named and corrected at the right level — morphological, orthographic, or phonological"
+  ],
   "tags": [
     "morphemes",
     "graphemes",
@@ -91,7 +104,7 @@
     "units",
     "terminology"
   ],
-  "status": "draft",
+  "status": "published",
   "version": "0.2.0",
   "created_at": "2026-04-07T00:00:00Z",
   "updated_at": "2026-04-17T00:00:00Z"

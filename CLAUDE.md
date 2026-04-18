@@ -55,7 +55,7 @@ src/
     Modules.tsx          # /modules — All modules listing
     ModuleView.tsx       # /modules/:id — Module detail with expandable lesson sections
   data/
-    tt_module_1_paradigm_shift.json          # Module metadata (source: Meaning-First-Literacy repo)
+    tt_module_1_paradigm_shift.json          # Module metadata
     tt_module_2_units_of_writing_system.json
     tt_module_3_four_questions.json
     tt_module_4_grapheme_choice.json
@@ -75,7 +75,7 @@ src/
 
 ## Data Architecture
 
-**Module metadata** (`src/data/*.json`) is copied from the Meaning-First-Literacy data repository (`data/teacher-training/*.json`). Schema lives at `schema/teacher_training_module.schema.json` in that repo. When metadata changes upstream, copy the JSON files here.
+**Module metadata** (`src/data/*.json`) defines module structure, assessment configuration, learning outcomes, key concepts, and section outlines for all six modules.
 
 **Lesson prose** (`src/lessons/module*.ts`) lives in this repo and is independent of the metadata JSON. Each file exports a `Record<number, string>` keyed by section number; values are markdown strings rendered by `react-markdown` + `remark-gfm`.
 
