@@ -121,7 +121,7 @@ export default function ModuleView() {
           </ul>
         </div>
 
-        {/* Sections outline — only Module 1 has this populated */}
+        {/* Sections outline */}
         {mod.sections && mod.sections.length > 0 && (
           <div className="card">
             <h3 style={{ marginBottom: "1rem" }}>What you'll study</h3>

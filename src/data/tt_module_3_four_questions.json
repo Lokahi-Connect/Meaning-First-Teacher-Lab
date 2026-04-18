@@ -39,6 +39,50 @@
   ],
   "student_band_connections": ["K-1", "2-3", "4-8", "9-12"],
   "estimated_duration_minutes": 90,
+  "sections": [
+    {
+      "section_number": 1,
+      "title": "Why the order of questions matters",
+      "summary": "Phonics-first instruction treats Q4 (how do graphemes function?) as the only question worth asking — and asks it first. Meaning-first investigation reverses this: meaning and structure come first, grapheme analysis follows from them. Why starting with sound closes investigation while starting with meaning opens it.",
+      "has_comprehension_check": true
+    },
+    {
+      "section_number": 2,
+      "title": "Question 1: What does this word mean?",
+      "summary": "Meaning is the anchor for all subsequent analysis. Strategies for building precise meaning: context, definition, word family membership. What 'meaning' requires in this framework — not just a dictionary gloss but a semantic relationship testable across a word family. Worked examples: <sign>, <just>, <struct>.",
+      "has_comprehension_check": true
+    },
+    {
+      "section_number": 3,
+      "title": "Question 2: How is this word built?",
+      "summary": "Identifying morphological structure through word sums. A word sum is a hypothesis about structure that must be verified: does each element carry its meaning in this word? Examples of sums that pass and sums that fail the sense test. The word sum as the central representational tool of Q2.",
+      "has_comprehension_check": true
+    },
+    {
+      "section_number": 4,
+      "title": "Question 3: What words are related to this one?",
+      "summary": "Building a word family by testing for shared meaning — not shared pronunciation or appearance. Why <island> does not belong to the family of <isle> despite resemblance, and why <sign>, <signal>, <signature>, and <insignificant> do. The matrix as the representational tool for mapping the full word family revealed by Q3.",
+      "has_comprehension_check": true
+    },
+    {
+      "section_number": 5,
+      "title": "Question 4: How do the graphemes function?",
+      "summary": "Grapheme analysis is richest when it draws on the answers to Q1–Q3. The <g> in <sign> is explained by <signal>; the <b> in <doubt> by its Latin family <dubitable>. Coming to Q4 last is not a delay — it is what makes the analysis possible. Function, not name, is the analytical target.",
+      "has_comprehension_check": true
+    },
+    {
+      "section_number": 6,
+      "title": "The inquiry cycle: Observe, Hypothesize, Test, Conclude, Reflect",
+      "summary": "The five stages as a disciplined investigation process. Observation: what do we notice about this word? Hypothesis: propose a word sum or family relationship. Test: verify against meaning and orthographic evidence. Conclude: what does this investigation establish? Reflect: what remains uncertain or worth pursuing further?",
+      "has_comprehension_check": true
+    },
+    {
+      "section_number": 7,
+      "title": "Building the routine: one word, then every word",
+      "summary": "How the Four Questions become a classroom habit rather than an occasion. Embedding quick investigations into ordinary instruction. Side-by-side: a phonics-first moment vs. a Four Questions moment on the same word. The cumulative effect of consistent inquiry on learner agency and vocabulary depth.",
+      "has_comprehension_check": true
+    }
+  ],
   "tags": [
     "four-questions",
     "inquiry",
@@ -47,7 +91,7 @@
     "routine"
   ],
   "status": "draft",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "created_at": "2026-04-07T00:00:00Z",
-  "updated_at": "2026-04-07T00:00:00Z"
+  "updated_at": "2026-04-17T00:00:00Z"
 }

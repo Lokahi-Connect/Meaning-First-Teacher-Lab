@@ -40,6 +40,50 @@
   "unlocks_modules": [],
   "student_band_connections": ["K-1", "2-3", "4-8", "9-12"],
   "estimated_duration_minutes": 120,
+  "sections": [
+    {
+      "section_number": 1,
+      "title": "The question that doesn't answer itself",
+      "summary": "Guided (mediated) questions open investigation without foreclosing it — they are not hints, not Socratic irony, and not leading questions. The same classroom moment handled three ways: telling, hinting, and guiding. What the guided version produces that the other two do not, cognitively and affectively.",
+      "has_comprehension_check": true
+    },
+    {
+      "section_number": 2,
+      "title": "Adapting investigation across developmental bands",
+      "summary": "The Four Questions and the inquiry cycle apply from K-1 through 9-12, but complexity and scaffolding differ by band. K-1: single-base words, simple suffixes, word families of 3–5. 2-3: bound bases, prefixes, small matrices. 4-8: multi-base words, etymological layers, full matrices. 9-12: disciplinary vocabulary, student-led investigation, extended word histories.",
+      "has_comprehension_check": true
+    },
+    {
+      "section_number": 3,
+      "title": "Designing for neurodivergent learners",
+      "summary": "How meaning-first instruction structurally supports students with language-based learning differences, ADHD, and sensory processing needs — not as accommodation but as design. Predictable routines reduce executive function load. Principled explanations replace arbitrary memorization. The absence of gamified noise and timed performance is an affordance, not a compromise.",
+      "has_comprehension_check": true
+    },
+    {
+      "section_number": 4,
+      "title": "Assessment as consolidation",
+      "summary": "The written reflections in this course are consolidation tools, not tests. Applying this model to classroom practice: low-stakes formative tasks that require students to explain, not recall. The gate criteria in each module as a model of what consolidating assessment looks like. How to write criteria that distinguish principled understanding from surface compliance.",
+      "has_comprehension_check": true
+    },
+    {
+      "section_number": 5,
+      "title": "Multiple entry points for the same investigation",
+      "summary": "Not every student enters a word investigation from the same place. Designing tasks with multiple entry points: the student who starts with meaning, the one who starts with a related word they know, the one who notices a grapheme. How to hold the investigation open while students find their way in — without lowering the cognitive target.",
+      "has_comprehension_check": true
+    },
+    {
+      "section_number": 6,
+      "title": "Assumed competence in practice",
+      "summary": "Assumed competence is a pedagogical stance, not a compliment. It shows up in task design (the investigation is structured so students can succeed), in language (errors are treated as evidence of reasoning), and in pacing (the response to a wrong answer is another question, not a correction). Concrete classroom examples.",
+      "has_comprehension_check": true
+    },
+    {
+      "section_number": 7,
+      "title": "Building the investigation culture: the first four weeks",
+      "summary": "Practical sequence for introducing SWI routines into a classroom that hasn't used them. Week 1: teacher-led Four Questions investigation as a class. Week 2: small-group investigations with modeled guided questions. Weeks 3-4: students begin raising their own word questions. What to expect, what to hold lightly, and how to know it's working.",
+      "has_comprehension_check": true
+    }
+  ],
   "tags": [
     "classroom-practice",
     "guided-questions",
@@ -50,7 +94,7 @@
     "developmental-bands"
   ],
   "status": "draft",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "created_at": "2026-04-07T00:00:00Z",
-  "updated_at": "2026-04-07T00:00:00Z"
+  "updated_at": "2026-04-17T00:00:00Z"
 }

@@ -39,6 +39,50 @@
   ],
   "student_band_connections": ["K-1", "2-3", "4-8", "9-12"],
   "estimated_duration_minutes": 90,
+  "sections": [
+    {
+      "section_number": 1,
+      "title": "Three systems, one confusion",
+      "summary": "Why instruction regularly conflates morphemes, graphemes, and phonemes — and what that conflation costs. Preview of the three units and the work of keeping them distinct. The analytical precision this module builds is foundational to every investigation that follows.",
+      "has_comprehension_check": true
+    },
+    {
+      "section_number": 2,
+      "title": "The morpheme: the unit of meaning",
+      "summary": "Defining the morpheme as the smallest unit of meaning in a word. Evidence that <-ed> is one morpheme with three pronunciations (/t/, /d/, /ɪd/), not three different morphemes. Morphemic stability as the reason meaning-first instruction works — revisiting Module 1 with new precision.",
+      "has_comprehension_check": true
+    },
+    {
+      "section_number": 3,
+      "title": "The grapheme: the unit of spelling",
+      "summary": "A grapheme is a letter or letter-team that represents a phoneme — not necessarily a single letter. Examples: <sh>, <igh>, <tch>, <ea> are each one grapheme. Counting graphemes in <night> (3: <n>, <igh>, <t>) vs. counting letters (5). The analytical consequence of confusing a letter with a grapheme.",
+      "has_comprehension_check": true
+    },
+    {
+      "section_number": 4,
+      "title": "The phoneme: the unit of sound",
+      "summary": "Phonemes as the contrastive units of sound — abstractions that vary by dialect and context, not fixed acoustic signals. Notation conventions: slashes for phonemes (/t/), angle brackets for graphemes (<t>). Why phonemes are identified through contrast (bit vs. sit), not by acoustic measurement.",
+      "has_comprehension_check": true
+    },
+    {
+      "section_number": 5,
+      "title": "Free bases and bound bases",
+      "summary": "Free bases can stand alone as words (play, sign, just); bound bases require affixes (struct, rupt, cede). Bound bases still carry determinate meanings and participate in full word sums: struct+ure, de+struct+ion, con+struct+ive. The distinction matters for writing and verifying word sums throughout the course.",
+      "has_comprehension_check": true
+    },
+    {
+      "section_number": 6,
+      "title": "Prefixes, suffixes, and the anatomy of a word sum",
+      "summary": "Prefixes precede the base; suffixes follow. Together with the base, they constitute morphological structure. First word sums: re+play, play+ing, re+play+ing. What the + marks (a morpheme boundary) and what the → represents (the relationship between structure and word).",
+      "has_comprehension_check": true
+    },
+    {
+      "section_number": 7,
+      "title": "When layers collapse: instructional consequences",
+      "summary": "Three case studies in layer confusion: calling <ph> two graphemes (grapheme-phoneme collapse), treating syllables as morphemes (morpheme-orthography collapse), describing <-ed> as 'sounding different in different words' (morpheme-phoneme collapse). How naming the layer prevents each error.",
+      "has_comprehension_check": true
+    }
+  ],
   "tags": [
     "morphemes",
     "graphemes",
@@ -48,7 +92,7 @@
     "terminology"
   ],
   "status": "draft",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "created_at": "2026-04-07T00:00:00Z",
-  "updated_at": "2026-04-07T00:00:00Z"
+  "updated_at": "2026-04-17T00:00:00Z"
 }

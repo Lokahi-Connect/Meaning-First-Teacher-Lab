@@ -39,6 +39,50 @@
   ],
   "student_band_connections": ["2-3", "4-8", "9-12"],
   "estimated_duration_minutes": 90,
+  "sections": [
+    {
+      "section_number": 1,
+      "title": "The chaos that isn't",
+      "summary": "The received claim that English spelling is irregular or largely arbitrary. What a principled examination shows: most 'exceptions' are words whose explanatory framework hasn't been found yet. The module's central commitment: every spelling has a reason — position, morphology, or etymology. The task is always to find it.",
+      "has_comprehension_check": true
+    },
+    {
+      "section_number": 2,
+      "title": "Position as a constraint on grapheme choice",
+      "summary": "Certain graphemes appear only in specific positions. <ck> follows a short vowel at the end of a single-syllable base; <tch> follows a short vowel where <ch> would appear elsewhere. Position — not arbitrariness — explains why one grapheme appears and not another. Worked examples across several grapheme pairs.",
+      "has_comprehension_check": true
+    },
+    {
+      "section_number": 3,
+      "title": "Morphemic boundaries and grapheme selection",
+      "summary": "When a word belongs to a morphological family, the base constrains spelling across the entire family. <sign>, <signal>, <signature>, <significant>: the <g> is stable because it is part of the base, not because of where it falls phonologically. Morphemic membership, not phonemic context, is the primary determinant of grapheme choice.",
+      "has_comprehension_check": true
+    },
+    {
+      "section_number": 4,
+      "title": "Etymology as the third explanatory layer",
+      "summary": "When position and morphology don't fully explain a spelling, etymology provides the third framework. French-origin: <ch> → /ʃ/ in <machine>, <chef>, <champagne>. Greek-origin: <ph> → /f/ in <phone>; <ch> → /k/ in <chorus>, <chaos>. Etymology is not trivia — it is a principled explanatory system with consistent patterns.",
+      "has_comprehension_check": true
+    },
+    {
+      "section_number": 5,
+      "title": "Grapheme function versus grapheme name",
+      "summary": "Asking 'what sound does <ea> make?' presupposes a single answer. Asking 'what is the function of <ea> in this word?' opens analysis: /ɛ/ in <bread>, /iː/ in <bead>, /eɪ/ in <great>. Function is always contextual. The shift from naming to analyzing function is the core analytical move of Q4.",
+      "has_comprehension_check": true
+    },
+    {
+      "section_number": 6,
+      "title": "Spelling stability across pronunciation shifts",
+      "summary": "Morphemes hold their spelling across phonological environments. <electric/electricity>: the <c> is stable across /k/ and /s/. <sane/sanity>, <divine/divinity>: vowel shifts do not disturb the base spelling. This principle — established in Module 1 for <-ed> — extends across the entire writing system. Stability is the rule.",
+      "has_comprehension_check": true
+    },
+    {
+      "section_number": 7,
+      "title": "From deficit framings to structural explanations",
+      "summary": "A practicum in replacing common deficit framings with structural analysis. The <b> in <debt> (Latin debitum; family: dubitable). The <k> in <know> (Germanic, still present in <knowledge>). The <gh> in <light> (historical fricative still audible in <laughter>). Each so-called silent letter has a function; the question is always what it is.",
+      "has_comprehension_check": true
+    }
+  ],
   "tags": [
     "graphemes",
     "orthographic-principles",
@@ -47,7 +91,7 @@
     "spelling"
   ],
   "status": "draft",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "created_at": "2026-04-07T00:00:00Z",
-  "updated_at": "2026-04-07T00:00:00Z"
+  "updated_at": "2026-04-17T00:00:00Z"
 }
