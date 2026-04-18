@@ -186,11 +186,11 @@ export default function ModuleView() {
           </div>
         )}
 
-        {/* Draft placeholder */}
-        {!isPublished && (
+        {/* Sections-not-yet-authored notice — shown only when sections are missing */}
+        {(!mod.sections || mod.sections.length === 0) && (
           <div className="placeholder-notice" style={{ marginTop: "0.5rem" }}>
-            Full module content is in development. Learning outcomes and key
-            concepts above reflect what this module will cover when published.
+            Lesson sections are being authored. Outcomes and key concepts above
+            are finalized.
           </div>
         )}
 
