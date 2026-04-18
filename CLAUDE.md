@@ -40,29 +40,58 @@ Teacher certification app for Lokahi Connect's Meaning-First Literacy™ program
 
 ```
 src/
-  main.tsx          # Entry point, HashRouter setup
-  App.tsx           # Route definitions
-  index.css         # Global styles and CSS custom properties
-  modules.ts        # Module data (6 certification modules)
-  vite-env.d.ts     # Vite type references
+  main.tsx              # Entry point, HashRouter setup
+  App.tsx               # Route definitions
+  index.css             # Global styles and CSS custom properties
+  modules.ts            # Imports all 6 JSON files; exports typed modules array
+  vite-env.d.ts         # Vite type references
   components/
-    Nav.tsx/.css     # Fixed navigation bar (ocean blue, aligned with meaning-first.org)
-    Footer.tsx/.css  # Site footer
+    Nav.tsx/.css         # Fixed navigation bar
+    Footer.tsx/.css      # Site footer
+    FeedbackButton.tsx   # Fixed bottom-right mailto button (page-aware subject)
   pages/
-    Dashboard.tsx    # / — Certification dashboard with module pathway
-    Registration.tsx # /register — Registration placeholder
-    Modules.tsx      # /modules — All modules listing
-    ModuleView.tsx   # /modules/:id — Individual module view
+    Dashboard.tsx        # / — Certification pathway with module cards
+    Registration.tsx     # /register — Registration placeholder
+    Modules.tsx          # /modules — All modules listing
+    ModuleView.tsx       # /modules/:id — Module detail with expandable lesson sections
+  data/
+    tt_module_1_paradigm_shift.json          # Module metadata (source: Meaning-First-Literacy repo)
+    tt_module_2_units_of_writing_system.json
+    tt_module_3_four_questions.json
+    tt_module_4_grapheme_choice.json
+    tt_module_5_word_sums_matrices.json
+    tt_module_6_guided_questions.json
+  lessons/
+    index.ts             # Lookup: moduleNumber → sectionNumber → markdown string
+    module1.ts           # Full lesson prose for all 7 sections of Module 1
+    module2.ts           # Full lesson prose for all 7 sections of Module 2
+    module3.ts           # Full lesson prose for all 7 sections of Module 3
+    module4.ts           # Full lesson prose for all 7 sections of Module 4
+    module5.ts           # Full lesson prose for all 8 sections of Module 5
+    module6.ts           # Full lesson prose for all 7 sections of Module 6
+  types/
+    module.ts            # TypeScript interfaces: Module, ModuleSection, ModuleAssessment
 ```
 
-## Data Relationship
+## Data Architecture
 
-Teacher training module metadata lives in the **Meaning-First-Literacy** data repository:
-- `data/teacher-training/*.json` — module content
-- `schema/teacher_training_module.schema.json` — module schema
-- `schema/teacher_registration.schema.json` — registration schema
+**Module metadata** (`src/data/*.json`) is copied from the Meaning-First-Literacy data repository (`data/teacher-training/*.json`). Schema lives at `schema/teacher_training_module.schema.json` in that repo. When metadata changes upstream, copy the JSON files here.
 
-This app consumes that data to render modules, registration, and the dashboard.
+**Lesson prose** (`src/lessons/module*.ts`) lives in this repo and is independent of the metadata JSON. Each file exports a `Record<number, string>` keyed by section number; values are markdown strings rendered by `react-markdown` + `remark-gfm`.
+
+**Rendering**: `ModuleView.tsx` renders sections as `<details>/<summary>` elements. Sections with lesson content are expandable; sections without fall back to the outline view.
+
+## Dependencies added beyond Vite scaffold
+
+- `react-markdown` — renders markdown lesson prose
+- `remark-gfm` — adds table support to react-markdown
+
+## Bundle splitting (vite.config.ts)
+
+Manual chunks keep the app shell fast:
+- `vendor` — react, react-dom, react-router-dom
+- `markdown` — react-markdown, remark-gfm
+- `lessons` — all six lesson prose files (~200 KB uncompressed)
 
 ## Deployment
 
