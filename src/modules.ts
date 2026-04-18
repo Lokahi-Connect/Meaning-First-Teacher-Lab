@@ -1,58 +1,21 @@
-export interface Module {
-  id: number;
-  title: string;
-  subtitle: string;
-  summary: string;
-  status: "published" | "draft";
-}
+// Source of truth: lokahi-connect/Meaning-First-Literacy
+// data/teacher-training/*.json
+// To sync: copy updated JSON files from that repo into src/data/
+import type { Module } from "./types/module";
+import mod1 from "./data/tt_module_1_paradigm_shift.json";
+import mod2 from "./data/tt_module_2_units_of_writing_system.json";
+import mod3 from "./data/tt_module_3_four_questions.json";
+import mod4 from "./data/tt_module_4_grapheme_choice.json";
+import mod5 from "./data/tt_module_5_word_sums_matrices.json";
+import mod6 from "./data/tt_module_6_guided_questions.json";
+
+export type { Module };
 
 export const modules: Module[] = [
-  {
-    id: 1,
-    title: "Module 1: The Paradigm Shift",
-    subtitle: "From phonics-first to meaning-first literacy",
-    summary:
-      "Explore why meaning is the foundation of the writing system and how Structured Word Inquiry reframes literacy instruction.",
-    status: "published",
-  },
-  {
-    id: 2,
-    title: "Module 2: Units of the Writing System",
-    subtitle: "Morphemes, graphemes, and phonemes in context",
-    summary:
-      "Learn the key linguistic units that structure English spelling and how they interrelate.",
-    status: "published",
-  },
-  {
-    id: 3,
-    title: "Module 3: The Four Questions of SWI",
-    subtitle: "A framework for investigating any word",
-    summary:
-      "Master the four questions that guide Structured Word Inquiry and apply them to real words.",
-    status: "published",
-  },
-  {
-    id: 4,
-    title: "Module 4: Grapheme Choice and Orthographic Principles",
-    subtitle: "Understanding spelling conventions",
-    summary:
-      "Investigate why English words are spelled the way they are through grapheme-phoneme correspondences and orthographic conventions.",
-    status: "published",
-  },
-  {
-    id: 5,
-    title: "Module 5: Word Sums, Matrices, and Suffixing Conventions",
-    subtitle: "Tools for morphological analysis",
-    summary:
-      "Build fluency with word sums and matrices as tools for understanding word structure and suffixing patterns.",
-    status: "published",
-  },
-  {
-    id: 6,
-    title: "Module 6: Guided Questions and Classroom Practice",
-    subtitle: "Bringing SWI into the classroom",
-    summary:
-      "Develop practical strategies for integrating Structured Word Inquiry into daily classroom instruction.",
-    status: "published",
-  },
-];
+  mod1,
+  mod2,
+  mod3,
+  mod4,
+  mod5,
+  mod6,
+] as unknown as Module[];

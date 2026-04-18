@@ -1,0 +1,53 @@
+{
+  "module_id": "tt_module_4_grapheme_choice",
+  "module_number": 4,
+  "course": "teacher-certification",
+  "title": "Grapheme Choice and Orthographic Principles",
+  "subtitle": "Why English Spells the Way It Does",
+  "summary": "Explores how grapheme choice in English is principled, not arbitrary. Teachers learn to analyze why specific graphemes appear in specific positions and how morphemic structure, etymology, and phonological context govern spelling. Dismantles the myth that English spelling is chaotic by revealing the orthographic principles at work.",
+  "learning_outcomes": [
+    "Explain why English grapheme choice is principled rather than arbitrary",
+    "Analyze grapheme function in context using the Four Questions",
+    "Identify how morphemic boundaries influence grapheme choice",
+    "Recognize the role of etymology in explaining grapheme patterns",
+    "Replace deficit framings (silent letters, exceptions) with structural explanations"
+  ],
+  "key_concepts": [
+    "Grapheme choice as principled",
+    "Positional constraints on graphemes",
+    "Morphemic influence on grapheme selection",
+    "Etymological marking",
+    "Grapheme function vs. grapheme name",
+    "Spelling stability across pronunciation shifts",
+    "No silent letters — describe function instead"
+  ],
+  "swi_connections": [
+    "Deepens Question 4: How do the graphemes function?",
+    "Connects grapheme analysis to morphemic structure from Q2 and Q3",
+    "Demonstrates how grapheme choice serves meaning, not just sound"
+  ],
+  "int_connections": [
+    "Principled explanations reduce working memory load vs. rote memorization",
+    "Structural reasoning supports learners who struggle with arbitrary rules",
+    "Predictable grapheme logic increases learner confidence and regulation"
+  ],
+  "prerequisite_modules": [
+    "tt_module_3_four_questions"
+  ],
+  "unlocks_modules": [
+    "tt_module_5_word_sums_matrices"
+  ],
+  "student_band_connections": ["2-3", "4-8", "9-12"],
+  "estimated_duration_minutes": 90,
+  "tags": [
+    "graphemes",
+    "orthographic-principles",
+    "grapheme-choice",
+    "etymology",
+    "spelling"
+  ],
+  "status": "draft",
+  "version": "0.1.0",
+  "created_at": "2026-04-07T00:00:00Z",
+  "updated_at": "2026-04-07T00:00:00Z"
+}

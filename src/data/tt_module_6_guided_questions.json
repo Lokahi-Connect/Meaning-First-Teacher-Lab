@@ -1,0 +1,56 @@
+{
+  "module_id": "tt_module_6_guided_questions",
+  "module_number": 6,
+  "course": "teacher-certification",
+  "title": "Guided Questions and Classroom Practice",
+  "subtitle": "From Understanding to Implementation",
+  "summary": "Bridges professional knowledge into classroom practice. Teachers learn to use guided (mediated) questions to lead inquiry without prescribing answers, design investigation routines across developmental bands, and implement meaning-first instruction in neurodivergent-informed ways. Emphasizes assessment as consolidation and learner agency as a design goal.",
+  "learning_outcomes": [
+    "Design and use guided questions that mediate learning without giving answers",
+    "Plan SWI inquiry routines appropriate for specific developmental bands",
+    "Implement meaning-first instruction that supports neurodivergent learners",
+    "Use assessment as consolidation rather than testing",
+    "Adapt pacing, scaffolding, and entry points to support learner variability",
+    "Build classroom cultures of investigation where students are positioned as capable"
+  ],
+  "key_concepts": [
+    "Mediated learning and guided questions",
+    "Inquiry routines across developmental bands",
+    "Neurodivergent-informed classroom design",
+    "Assessment as consolidation, not testing",
+    "Learner agency and pacing",
+    "Assumed competence in practice",
+    "Multiple entry points for the same investigation"
+  ],
+  "swi_connections": [
+    "Applies all Four Questions in classroom contexts",
+    "Uses word sums, matrices, and join analysis as teaching tools",
+    "Positions the SWI inquiry cycle as a daily classroom routine"
+  ],
+  "int_connections": [
+    "Translates INT principles into specific classroom practices",
+    "Addresses executive function through predictable routines",
+    "Reduces cognitive load through scaffolded inquiry",
+    "Supports regulation through bounded, coherent tasks",
+    "Eliminates sensory surprises and gamified noise"
+  ],
+  "prerequisite_modules": [
+    "tt_module_5_word_sums_matrices"
+  ],
+  "unlocks_modules": [],
+  "student_band_connections": ["K-1", "2-3", "4-8", "9-12"],
+  "estimated_duration_minutes": 120,
+  "tags": [
+    "classroom-practice",
+    "guided-questions",
+    "mediated-learning",
+    "implementation",
+    "assessment",
+    "neurodivergent-informed",
+    "developmental-bands"
+  ],
+  "status": "draft",
+  "version": "0.1.0",
+  "created_at": "2026-04-07T00:00:00Z",
+  "updated_at": "2026-04-07T00:00:00Z"
+}

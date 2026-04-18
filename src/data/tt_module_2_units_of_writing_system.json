@@ -1,0 +1,54 @@
+{
+  "module_id": "tt_module_2_units_of_writing_system",
+  "module_number": 2,
+  "course": "teacher-certification",
+  "title": "Units of the Writing System",
+  "subtitle": "Morphemes, Graphemes, and Phonemes",
+  "summary": "Deepens understanding of the three distinct layers of English orthography. Clarifies what morphemes, graphemes, and phonemes are, how they relate, and why collapsing them leads to instructional distortion. Builds precision in identifying and naming the units teachers will work with throughout the course.",
+  "learning_outcomes": [
+    "Define and distinguish morphemes, graphemes, and phonemes with precision",
+    "Explain why these three layers must be kept distinct in instruction",
+    "Identify bases (free and bound) and affixes (prefixes and suffixes) in words",
+    "Recognize graphemes as letter-teams representing phonemes, not individual letters",
+    "Describe how collapsing layers produces common instructional errors"
+  ],
+  "key_concepts": [
+    "Morpheme: unit of meaning",
+    "Grapheme: unit of spelling",
+    "Phoneme: unit of sound",
+    "Free base vs. bound base",
+    "Prefix and suffix",
+    "Letter-teams as graphemes",
+    "Layer collapse as a source of instructional error"
+  ],
+  "swi_connections": [
+    "Provides the analytical vocabulary for all SWI investigation",
+    "Connects morphemic analysis to the first two of the Four Questions",
+    "Establishes notation conventions: angle brackets for morphemes, slashes for phonemes"
+  ],
+  "int_connections": [
+    "Clear naming of units reduces cognitive load",
+    "Predictable terminology supports executive function",
+    "Morphemic logic reduces working memory demand compared to memorization"
+  ],
+  "prerequisite_modules": [
+    "tt_module_1_paradigm_shift"
+  ],
+  "unlocks_modules": [
+    "tt_module_3_four_questions"
+  ],
+  "student_band_connections": ["K-1", "2-3", "4-8", "9-12"],
+  "estimated_duration_minutes": 90,
+  "tags": [
+    "morphemes",
+    "graphemes",
+    "phonemes",
+    "writing-system",
+    "units",
+    "terminology"
+  ],
+  "status": "draft",
+  "version": "0.1.0",
+  "created_at": "2026-04-07T00:00:00Z",
+  "updated_at": "2026-04-07T00:00:00Z"
+}

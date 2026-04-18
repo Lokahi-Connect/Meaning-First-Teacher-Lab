@@ -1,0 +1,61 @@
+{
+  "module_id": "tt_module_5_word_sums_matrices",
+  "module_number": 5,
+  "course": "teacher-certification",
+  "title": "Word Sums, Matrices, and Suffixing Conventions",
+  "subtitle": "The Tools of Structured Word Inquiry",
+  "summary": "Provides hands-on practice with the core representational tools of SWI: word sums, matrices, and suffixing conventions. Teachers learn to write and verify word sums, build and read matrices, and apply the four join conventions (Replace, Double, Change, Toggle) using the 'Check the Joins!' framework.",
+  "learning_outcomes": [
+    "Write accurate word sums using standard notation (base + affix → word)",
+    "Verify word sums by testing for shared sense across a word family",
+    "Build and read matrices as generative maps of word families",
+    "Apply the four suffixing conventions: Replace, Double, Change, Toggle",
+    "Use the 'Check the Joins!' framework to analyze what happens when morphemes meet",
+    "Identify when <-es> is an orthographic outcome of <-s>, not a separate suffix"
+  ],
+  "key_concepts": [
+    "Word sum notation and verification",
+    "Matrices as generative family maps",
+    "Suffixing convention: Replace (final non-syllabic <e> replaced by vowel suffix)",
+    "Suffixing convention: Double (final consonant doubled before vowel suffix)",
+    "Suffixing convention: Change (letter changes per orthographic convention)",
+    "Suffixing convention: Toggle (predictable swap tied to convention)",
+    "Check the Joins! framework",
+    "Shared sense as the test for word family membership"
+  ],
+  "swi_connections": [
+    "Word sums make Question 2 (How is it built?) visible and testable",
+    "Matrices operationalize Question 3 (What other words are related?)",
+    "Join conventions connect structure to spelling at the morpheme boundary",
+    "All tools connect back to meaning as the anchor"
+  ],
+  "int_connections": [
+    "Word sums and matrices make structure visible, reducing hidden processing",
+    "Named conventions (Replace, Double, Change, Toggle) replace vague 'rules'",
+    "Predictable tools support executive function and working memory",
+    "Explicit join language avoids confusing framings like 'drop the e'"
+  ],
+  "prerequisite_modules": [
+    "tt_module_4_grapheme_choice"
+  ],
+  "unlocks_modules": [
+    "tt_module_6_guided_questions"
+  ],
+  "student_band_connections": ["K-1", "2-3", "4-8", "9-12"],
+  "estimated_duration_minutes": 120,
+  "tags": [
+    "word-sums",
+    "matrices",
+    "suffixing-conventions",
+    "joins",
+    "Replace",
+    "Double",
+    "Change",
+    "Toggle",
+    "tools"
+  ],
+  "status": "draft",
+  "version": "0.1.0",
+  "created_at": "2026-04-07T00:00:00Z",
+  "updated_at": "2026-04-07T00:00:00Z"
+}

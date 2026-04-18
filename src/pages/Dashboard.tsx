@@ -1,6 +1,13 @@
 import { Link } from "react-router-dom";
 import { modules } from "../modules";
 
+function formatDuration(minutes: number): string {
+  if (minutes < 60) return `${minutes} min`;
+  const h = Math.floor(minutes / 60);
+  const m = minutes % 60;
+  return m ? `${h} hr ${m} min` : `${h} hr`;
+}
+
 export default function Dashboard() {
   return (
     <>
@@ -32,30 +39,56 @@ export default function Dashboard() {
           {modules.map((mod) => {
             const available = mod.status === "published";
             return (
-              <div className="card" key={mod.id}>
+              <div className="card" key={mod.module_id}>
                 <div
                   style={{
                     display: "flex",
                     justifyContent: "space-between",
                     alignItems: "start",
                     marginBottom: "0.5rem",
+                    gap: "0.5rem",
                   }}
                 >
                   <h3>{mod.title}</h3>
                   <span
                     className={`badge ${available ? "badge--available" : "badge--locked"}`}
+                    style={{ flexShrink: 0 }}
                   >
                     {available ? "Available" : "Locked"}
                   </span>
                 </div>
                 <p>{mod.summary}</p>
-                {available && (
+                {mod.estimated_duration_minutes && (
+                  <p
+                    style={{
+                      marginTop: "0.5rem",
+                      fontFamily: "var(--font-mono)",
+                      fontSize: "0.78rem",
+                      color: "var(--muted)",
+                    }}
+                  >
+                    {formatDuration(mod.estimated_duration_minutes)}
+                  </p>
+                )}
+                {available ? (
                   <Link
-                    to={`/modules/${mod.id}`}
+                    to={`/modules/${mod.module_number}`}
                     className="btn-primary"
                     style={{ marginTop: "1rem" }}
                   >
                     Start module →
+                  </Link>
+                ) : (
+                  <Link
+                    to={`/modules/${mod.module_number}`}
+                    style={{
+                      display: "inline-block",
+                      marginTop: "0.75rem",
+                      color: "var(--muted)",
+                      fontSize: "0.88rem",
+                    }}
+                  >
+                    Preview outcomes →
                   </Link>
                 )}
               </div>

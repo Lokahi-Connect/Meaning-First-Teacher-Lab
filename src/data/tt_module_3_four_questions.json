@@ -1,0 +1,53 @@
+{
+  "module_id": "tt_module_3_four_questions",
+  "module_number": 3,
+  "course": "teacher-certification",
+  "title": "The Four Questions of SWI",
+  "subtitle": "An Inquiry Framework for Any Word",
+  "summary": "Introduces the core question set of Structured Word Inquiry: What does it mean? How is it built? What other words are related? How do the graphemes function? Teachers learn to use these questions as a repeatable investigation routine that moves from meaning to structure to grapheme function to phonology.",
+  "learning_outcomes": [
+    "Apply the Four Questions to investigate any word",
+    "Lead students through the SWI inquiry cycle (Observe, Hypothesize, Test, Conclude, Reflect)",
+    "Explain why the questions follow a meaning-first order",
+    "Use the Four Questions to reveal structure rather than impose rules",
+    "Recognize how the inquiry routine supports learner agency and reduces memorization"
+  ],
+  "key_concepts": [
+    "Question 1: What does it mean?",
+    "Question 2: How is it built?",
+    "Question 3: What other words are related?",
+    "Question 4: How do the graphemes function?",
+    "SWI inquiry cycle: Observe, Hypothesize, Test, Conclude, Reflect",
+    "Inquiry as routine, not one-off activity",
+    "Meaning-first question order"
+  ],
+  "swi_connections": [
+    "The Four Questions are the central tool of SWI practice",
+    "Connects directly to word sums (Q2), matrices (Q3), and grapheme analysis (Q4)",
+    "Establishes the inquiry cycle teachers will use in every subsequent module"
+  ],
+  "int_connections": [
+    "Predictable inquiry routine supports executive function",
+    "Questions scaffold investigation without prescribing answers",
+    "Routine reduces cognitive load by providing consistent entry points"
+  ],
+  "prerequisite_modules": [
+    "tt_module_2_units_of_writing_system"
+  ],
+  "unlocks_modules": [
+    "tt_module_4_grapheme_choice"
+  ],
+  "student_band_connections": ["K-1", "2-3", "4-8", "9-12"],
+  "estimated_duration_minutes": 90,
+  "tags": [
+    "four-questions",
+    "inquiry",
+    "SWI",
+    "investigation",
+    "routine"
+  ],
+  "status": "draft",
+  "version": "0.1.0",
+  "created_at": "2026-04-07T00:00:00Z",
+  "updated_at": "2026-04-07T00:00:00Z"
+}

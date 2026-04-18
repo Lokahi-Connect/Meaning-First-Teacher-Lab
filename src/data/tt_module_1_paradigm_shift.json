@@ -1,0 +1,130 @@
+{
+  "module_id": "tt_module_1_paradigm_shift",
+  "module_number": 1,
+  "course": "teacher-certification",
+  "title": "The Paradigm Shift",
+  "subtitle": "Before instruction can change, understanding must change.",
+  "summary": "Examines what phonics-first frameworks assume about English spelling and what those assumptions cost students. Demonstrates that systematic student errors are logical products of an inaccurate explanatory framework, not evidence of student failure. Establishes the three layers of the writing system, the meaning-first investigative sequence, and the research base for morphological instruction.",
+  "learning_outcomes": [
+    "Recognize student spelling errors (e.g. *jumpt, *stopt, *wosht) as logical products of phonics-first instruction, not carelessness or deficits",
+    "Explain why the suffix <-ed> is morphologically stable across its three pronunciation environments (/t/, /d/, /ɪd/)",
+    "Identify false analyses produced by phonics-first instruction, including the invented suffixes <-tion> and <-sion>",
+    "Explain why syllabication (e.g. VCCV) destroys morpheme boundaries and obscures meaning",
+    "Distinguish the three layers of the writing system: morphology (morpheme), orthography (grapheme), phonology (phoneme)",
+    "Apply the meaning-first investigative sequence: Meaning → Structure → Word family → Grapheme function",
+    "Contrast phonics-first responses that close investigation with meaning-first responses that open it",
+    "Articulate the research finding that morphological instruction most benefits less able and younger students"
+  ],
+  "key_concepts": [
+    "Morphological stability: morphemes hold their spelling across pronunciation shifts",
+    "Grapheme-phoneme correspondences are always contextual — analyzed within a specific word, never in isolation",
+    "False suffixes: <-tion> and <-sion> do not exist; the suffix is <-ion>",
+    "Syllabication severs morpheme boundaries because it detects sound boundaries, not meaning boundaries",
+    "Three layers: morphology (morpheme), orthography (grapheme), phonology (phoneme)",
+    "The investigative sequence: Meaning → Structure → Word family → Grapheme function",
+    "No irregular spellings — only spellings a sound-first model cannot explain",
+    "No silent letters — every grapheme has a function; the question is always: what is it?",
+    "Phonics-first characterizations (irregular, silent, exception) are labels that close inquiry",
+    "Meaning-first responses open investigation by directing attention to the base and word family"
+  ],
+  "swi_connections": [
+    "Word sums for <-ed> across phonological environments (jump+ed, jog+ed, land+ed)",
+    "Morphological analysis of act+ion and tense/+ion revealing the false <-tion>/<-sion> analysis",
+    "Join conventions demonstrated: doubling (jog+ed→jogged), replacing (tense/+ion→tension)",
+    "The investigative sequence as the foundation for all SWI inquiry"
+  ],
+  "int_connections": [
+    "Assumed competence: student spelling errors (e.g. *jumpt, *stopt) reflect the limits of the instructional framework, not the limits of the student — reframing error as evidence of logical reasoning within a flawed system",
+    "Deficit language has cognitive and affective costs: framing students as careless, non-retaining, or memory-impaired increases demand-sensitivity and erodes self-concept; the paradigm shift in Module 1 is an affect-regulation intervention as much as a cognitive one",
+    "Morphological stability provides predictability: a system in which morphemes hold their spelling is cognitively stabilizing; arbitrary exceptions signal system unreliability, which is dysregulating for students with language-based learning differences",
+    "Generative tools reduce cognitive load: one morphological principle (morphemes hold their spelling across pronunciation shifts) accounts for a large class of words that phonics-first instruction requires students to memorize individually — the load reduction scales with the generativity of the principle",
+    "Learner agency through transferable inquiry: the meaning-first investigative sequence gives students a repeatable tool they can apply independently across new words — reducing dependence on teacher explanation and increasing autonomous engagement with the writing system",
+    "Principled understanding replaces arbitrary rule-exception learning, eliminating the working memory demand of storing a growing list of exceptions that carry no generative value"
+  ],
+  "prerequisite_modules": [],
+  "unlocks_modules": [
+    "tt_module_2_units_of_writing_system"
+  ],
+  "student_band_connections": ["K-1", "2-3", "4-8", "9-12"],
+  "estimated_duration_minutes": 60,
+  "format": "Reading · comprehension checks · formal assessment · written reflection",
+  "sections": [
+    {
+      "section_number": 1,
+      "title": "A student who did everything right",
+      "summary": "The *jumpt* case: why phonetically logical but orthographically inaccurate spellings reveal a framework problem, not a student problem. Morphological stability of the <-ed> suffix.",
+      "has_comprehension_check": true
+    },
+    {
+      "section_number": 2,
+      "title": "What phonics-first instruction produces",
+      "summary": "How positioning sound as the primary explanatory system obscures meaning. Graphemes analyzed in context. Comparison table: does, sign/signal, love, sugar, knowledge.",
+      "has_comprehension_check": true
+    },
+    {
+      "section_number": 3,
+      "title": "When the framework invents its own evidence",
+      "summary": "The false suffixes <-tion> and <-sion>: how phonics-first analysis severs transparent morphological relationships. The real suffix is <-ion>.",
+      "has_comprehension_check": true
+    },
+    {
+      "section_number": 4,
+      "title": "When syllabication destroys the base",
+      "summary": "VCCV syllabication (jum·ping) vs. morphological analysis (jump+ing). Why syllable divisions have no mechanism for detecting morpheme boundaries.",
+      "has_comprehension_check": true
+    },
+    {
+      "section_number": 5,
+      "title": "Three systems, one writing system",
+      "summary": "Morphology, orthography, and phonology as distinct layers. The principled hierarchy: morphology governs spelling; phonology describes pronunciation but does not determine it.",
+      "has_comprehension_check": true
+    },
+    {
+      "section_number": 6,
+      "title": "A practitioner's moment of recognition",
+      "summary": "Founder's reflection on the shift from phonics-first to meaning-first. Research grounding: Bowers & Kirby (2010), Goodwin & Ahn (2010, 2013) on morphological instruction.",
+      "has_comprehension_check": true
+    },
+    {
+      "section_number": 7,
+      "title": "What changes in the classroom",
+      "summary": "Side-by-side comparison of phonics-first and meaning-first teacher responses to five common classroom situations. Meaning-first responses are more precise, not softer.",
+      "has_comprehension_check": true
+    }
+  ],
+  "assessment": {
+    "question_count": 10,
+    "passing_score": 8,
+    "passing_percentage": 80,
+    "question_types": ["multiple-choice", "true-false", "word-bank"],
+    "gates_reflection": true
+  },
+  "gate_criteria": [
+    "Student error is described as logical within a phonics-first frame — not as careless, unmotivated, or evidence of a learning deficit",
+    "Word investigation moves from meaning and structure before addressing sound or grapheme function",
+    "The distinction between rule-memorization and principled understanding is articulated in concrete, instructional terms",
+    "No phonics-first characterizations (silent letter, irregular, exception) are used without being named and examined as such"
+  ],
+  "references": [
+    "Bowers, P. N., & Kirby, J. R. (2010). Effects of morphological instruction on vocabulary acquisition. Reading and Writing, 23, 515–537.",
+    "Bowers, P. N., Kirby, J. R., & Deacon, S. H. (2010). The effects of morphological instruction on literacy skills: A systematic review of the literature. Review of Educational Research, 80(2), 144–179.",
+    "Goodwin, A. P., & Ahn, S. (2010). A meta-analysis of morphological interventions: Effects on literacy achievement of children with literacy difficulties. Annals of Dyslexia, 60, 183–208.",
+    "Goodwin, A. P., & Ahn, S. (2013). A meta-analysis of morphological interventions in English: Effects on literacy outcomes for school-age children. Scientific Studies of Reading, 17(4), 257–285.",
+    "Venezky, R. L. (1999). The American way of spelling: The structure and origins of American English orthography. Guilford Press.",
+    "Bowers, P. N. (2022). Structured Word Inquiry (SWI): Literacy instruction that makes sense of English spelling for students of all ages and abilities. PsyArXiv. https://doi.org/10.31234/osf.io/aktzw"
+  ],
+  "tags": [
+    "paradigm-shift",
+    "phonics-first-critique",
+    "morphological-stability",
+    "false-suffixes",
+    "syllabication",
+    "three-layers",
+    "investigative-sequence",
+    "meaning-first"
+  ],
+  "status": "published",
+  "version": "1.1.0",
+  "created_at": "2026-04-07T00:00:00Z",
+  "updated_at": "2026-04-10T00:00:00Z"
+}
