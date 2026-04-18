@@ -5,7 +5,9 @@ import remarkGfm from "remark-gfm";
 import { modules } from "../modules";
 import { lessonContent } from "../lessons";
 import { modulePractice } from "../data/practice";
+import { chunkRetrieval, type RetrievalSplit } from "../data/chunkRetrieval";
 import ModuleAssessment from "../components/ModuleAssessment";
+import RecallPractice from "../components/RecallPractice";
 import {
   getModuleStatus,
   markModuleViewed,
@@ -20,6 +22,98 @@ function formatDuration(minutes: number): string {
   const m = minutes % 60;
   return m ? `${h} hr ${m} min` : `${h} hr`;
 }
+
+// ── In-lesson retrieval ──────────────────────────────────────────────────────
+
+interface InLessonRetrievalProps {
+  question: string;
+  answer: string;
+}
+
+function InLessonRetrieval({ question, answer }: InLessonRetrievalProps) {
+  const [revealed, setRevealed] = useState(false);
+
+  return (
+    <div className="inline-retrieval">
+      <div className="inline-retrieval__label">
+        <span className="inline-retrieval__icon">↻</span>
+        Pause and retrieve
+      </div>
+      <p className="inline-retrieval__question">{question}</p>
+      {!revealed ? (
+        <button className="inline-retrieval__check" onClick={() => setRevealed(true)}>
+          Check answer ↓
+        </button>
+      ) : (
+        <div className="inline-retrieval__answer">
+          <span className="inline-retrieval__answer-label">Answer</span>
+          <p>{answer}</p>
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ── Chunk splitting ──────────────────────────────────────────────────────────
+
+function splitMarkdown(
+  markdown: string,
+  splits: RetrievalSplit[],
+): { content: string; retrieval?: { question: string; answer: string } }[] {
+  if (!splits.length) return [{ content: markdown }];
+
+  const chunks: { content: string; retrieval?: { question: string; answer: string } }[] = [];
+  let remaining = markdown;
+
+  for (const split of splits) {
+    const idx = remaining.indexOf(split.splitAt);
+    if (idx === -1) continue;
+    const chunk = remaining.slice(0, idx).trim();
+    if (chunk) {
+      chunks.push({ content: chunk, retrieval: { question: split.question, answer: split.answer } });
+    }
+    remaining = remaining.slice(idx).trim();
+  }
+
+  if (remaining.trim()) {
+    chunks.push({ content: remaining.trim() });
+  }
+
+  return chunks.filter((c) => c.content.length > 0);
+}
+
+// ── Chunked lesson renderer ──────────────────────────────────────────────────
+
+interface ChunkedLessonProps {
+  body: string;
+  moduleNumber: number;
+  sectionNumber: number;
+}
+
+function ChunkedLesson({ body, moduleNumber, sectionNumber }: ChunkedLessonProps) {
+  const splits = chunkRetrieval[moduleNumber]?.[sectionNumber] ?? [];
+  const chunks = splitMarkdown(body, splits);
+
+  return (
+    <>
+      {chunks.map((chunk, i) => (
+        <div key={i}>
+          <div className="lesson-body">
+            <ReactMarkdown remarkPlugins={[remarkGfm]}>{chunk.content}</ReactMarkdown>
+          </div>
+          {chunk.retrieval && (
+            <InLessonRetrieval
+              question={chunk.retrieval.question}
+              answer={chunk.retrieval.answer}
+            />
+          )}
+        </div>
+      ))}
+    </>
+  );
+}
+
+// ── Section practice ─────────────────────────────────────────────────────────
 
 interface SectionPracticeProps {
   moduleNumber: number;
@@ -74,6 +168,8 @@ function SectionPractice({ moduleNumber, sectionNumber }: SectionPracticeProps) 
   );
 }
 
+// ── Main view ────────────────────────────────────────────────────────────────
+
 export default function ModuleView() {
   const { id } = useParams<{ id: string }>();
   const mod = modules.find((m) => m.module_number === Number(id));
@@ -103,6 +199,7 @@ export default function ModuleView() {
   const moduleLessons = lessonContent[mod.module_number];
   const hasLessons = moduleLessons && Object.keys(moduleLessons).length > 0;
   const isPublished = mod.status === "published";
+  const showRecall = mod.module_number > 1;
 
   return (
     <>
@@ -142,6 +239,9 @@ export default function ModuleView() {
         <p style={{ marginBottom: "1.5rem" }}>
           <Link to="/modules">← Back to modules</Link>
         </p>
+
+        {/* Spaced retrieval — shown for modules 2–6 */}
+        {showRecall && <RecallPractice currentModule={mod.module_number} />}
 
         {/* Summary */}
         <div className="card">
@@ -236,7 +336,7 @@ export default function ModuleView() {
             </h3>
             {hasLessons && (
               <p style={{ fontSize: "0.85rem", color: "var(--muted)", marginBottom: "1rem" }}>
-                Select a section to read the full lesson. Practice questions appear after each lesson.
+                Select a section to read the full lesson. Retrieval prompts appear within each lesson. Practice questions appear after.
               </p>
             )}
             <ol
@@ -282,9 +382,11 @@ export default function ModuleView() {
                             </span>
                           </span>
                         </summary>
-                        <div className="lesson-body">
-                          <ReactMarkdown remarkPlugins={[remarkGfm]}>{body}</ReactMarkdown>
-                        </div>
+                        <ChunkedLesson
+                          body={body}
+                          moduleNumber={mod.module_number}
+                          sectionNumber={section.section_number}
+                        />
                         {hasPractice && (
                           <SectionPractice
                             moduleNumber={mod.module_number}
