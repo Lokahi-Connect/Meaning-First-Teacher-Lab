@@ -321,6 +321,278 @@ a:hover {
   text-decoration: none;
 }
 
+/* ---------- Section details (expandable lesson sections) ---------- */
+
+.section-details {
+  border: none;
+}
+
+.section-details > summary {
+  list-style: none;
+}
+
+.section-details > summary::-webkit-details-marker {
+  display: none;
+}
+
+.section-summary {
+  display: flex;
+  gap: 1rem;
+  padding: 0.9rem 0;
+  align-items: flex-start;
+  cursor: pointer;
+  user-select: none;
+}
+
+.section-summary:hover .section-title {
+  color: var(--ocean);
+}
+
+.section-num {
+  flex-shrink: 0;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--muted);
+  padding-top: 0.15rem;
+  min-width: 2rem;
+}
+
+.section-summary-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.section-title {
+  font-weight: 600;
+  color: var(--ink);
+  font-size: 0.95rem;
+  line-height: 1.4;
+  transition: color 0.15s ease;
+}
+
+.section-desc {
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.section-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-shrink: 0;
+  align-self: center;
+}
+
+.section-chevron {
+  font-size: 1.2rem;
+  color: var(--muted);
+  line-height: 1;
+  transition: transform 0.2s ease;
+  display: inline-block;
+}
+
+.section-details[open] .section-chevron {
+  transform: rotate(90deg);
+}
+
+/* ---------- Lesson body (markdown prose) ---------- */
+
+.lesson-body {
+  padding: 1.5rem 0 1.75rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.97rem;
+  line-height: 1.75;
+  color: var(--ink);
+}
+
+.lesson-body > * + * {
+  margin-top: 1rem;
+}
+
+.lesson-body h2 {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.lesson-body h2:first-child {
+  margin-top: 0;
+}
+
+.lesson-body h3 {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--ocean);
+  margin-top: 1.5rem;
+  margin-bottom: 0.35rem;
+}
+
+.lesson-body p {
+  margin: 0;
+}
+
+.lesson-body strong {
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.lesson-body em {
+  font-style: italic;
+}
+
+.lesson-body code {
+  font-family: var(--font-mono);
+  font-size: 0.875em;
+  background: rgba(46, 196, 160, 0.1);
+  color: var(--ocean);
+  padding: 0.1em 0.35em;
+  border-radius: 0.25rem;
+  border: 1px solid rgba(46, 196, 160, 0.25);
+}
+
+.lesson-body pre {
+  background: var(--sand);
+  border: 1px solid var(--border);
+  border-radius: 0.6rem;
+  padding: 1rem 1.25rem;
+  overflow-x: auto;
+  font-family: var(--font-mono);
+  font-size: 0.87rem;
+  line-height: 1.7;
+  color: var(--ink);
+  margin-top: 0.75rem;
+}
+
+.lesson-body pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: inherit;
+  color: inherit;
+}
+
+.lesson-body blockquote {
+  border-left: 3px solid var(--seafoam);
+  margin-left: 0;
+  padding: 0.5rem 0 0.5rem 1.25rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+.lesson-body blockquote p {
+  margin: 0;
+}
+
+.lesson-body ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding-left: 0;
+}
+
+.lesson-body ul li {
+  padding-left: 1.2rem;
+  position: relative;
+}
+
+.lesson-body ul li::before {
+  content: "·";
+  position: absolute;
+  left: 0;
+  color: var(--seafoam);
+  font-weight: 700;
+  font-size: 1.1em;
+}
+
+.lesson-body ol {
+  list-style: none;
+  counter-reset: lesson-ol;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding-left: 0;
+}
+
+.lesson-body ol li {
+  counter-increment: lesson-ol;
+  padding-left: 1.75rem;
+  position: relative;
+}
+
+.lesson-body ol li::before {
+  content: counter(lesson-ol) ".";
+  position: absolute;
+  left: 0;
+  color: var(--seafoam);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 700;
+  top: 0.2em;
+}
+
+.lesson-body hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 1.5rem 0;
+}
+
+/* Markdown tables (GFM) */
+.lesson-body table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  margin-top: 0.75rem;
+}
+
+.lesson-body th {
+  text-align: left;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+  padding: 0.6rem 0.75rem;
+  border-bottom: 2px solid var(--border);
+  background: var(--sand);
+}
+
+.lesson-body td {
+  padding: 0.6rem 0.75rem;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+  line-height: 1.55;
+}
+
+.lesson-body tr:last-child td {
+  border-bottom: none;
+}
+
+.lesson-body td:first-child {
+  font-family: var(--font-mono);
+  font-size: 0.87rem;
+  color: var(--ocean);
+  white-space: nowrap;
+}
+
+/* Reflection questions — last section in each lesson body */
+.lesson-body > ol:last-child {
+  background: var(--sand);
+  border-radius: 0.75rem;
+  padding: 1rem 1.25rem 1rem 2.5rem;
+  border: 1px solid var(--border);
+  margin-top: 1.25rem;
+}
+
 /* Give page content room so the button never overlaps it on small screens */
 @media (max-width: 600px) {
   .feedback-btn {

@@ -1,5 +1,8 @@
 import { useParams, Link } from "react-router-dom";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 import { modules } from "../modules";
+import { lessonContent } from "../lessons";
 
 function formatDuration(minutes: number): string {
   if (minutes < 60) return `${minutes} min`;
@@ -27,6 +30,8 @@ export default function ModuleView() {
   }
 
   const isPublished = mod.status === "published";
+  const moduleLessons = lessonContent[mod.module_number];
+  const hasLessons = moduleLessons && Object.keys(moduleLessons).length > 0;
 
   return (
     <>
@@ -36,9 +41,7 @@ export default function ModuleView() {
           <h1>{mod.title}</h1>
           {mod.subtitle && <p>{mod.subtitle}</p>}
           <div className="hero-meta" style={{ display: "flex", gap: "0.75rem", justifyContent: "center", flexWrap: "wrap", marginTop: "1.25rem" }}>
-            <span
-              className={`badge ${isPublished ? "badge--published" : "badge--draft"}`}
-            >
+            <span className={`badge ${isPublished ? "badge--published" : "badge--draft"}`}>
               {mod.status}
             </span>
             {mod.estimated_duration_minutes && (
@@ -121,55 +124,102 @@ export default function ModuleView() {
           </ul>
         </div>
 
-        {/* Sections outline */}
+        {/* Sections — expandable when lesson bodies exist, outline-only otherwise */}
         {mod.sections && mod.sections.length > 0 && (
           <div className="card">
-            <h3 style={{ marginBottom: "1rem" }}>What you'll study</h3>
+            <h3 style={{ marginBottom: hasLessons ? "0.5rem" : "1rem" }}>
+              {hasLessons ? "Module content" : "What you'll study"}
+            </h3>
+            {hasLessons && (
+              <p style={{ fontSize: "0.85rem", color: "var(--muted)", marginBottom: "1rem" }}>
+                Select a section to read the full lesson.
+              </p>
+            )}
             <ol style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: "0" }}>
-              {mod.sections.map((section, i) => (
-                <li
-                  key={section.section_number}
-                  style={{
-                    display: "flex",
-                    gap: "1rem",
-                    padding: "0.9rem 0",
-                    borderBottom: i < mod.sections!.length - 1 ? "1px solid var(--border)" : "none",
-                    alignItems: "flex-start",
-                  }}
-                >
-                  <span
+              {mod.sections.map((section, i) => {
+                const body = moduleLessons?.[section.section_number];
+                const isLast = i === mod.sections!.length - 1;
+
+                if (body) {
+                  return (
+                    <li
+                      key={section.section_number}
+                      style={{ borderBottom: isLast ? "none" : "1px solid var(--border)" }}
+                    >
+                      <details className="section-details">
+                        <summary className="section-summary">
+                          <span className="section-num">
+                            {String(section.section_number).padStart(2, "0")}
+                          </span>
+                          <span className="section-summary-text">
+                            <span className="section-title">{section.title}</span>
+                            {section.summary && (
+                              <span className="section-desc">{section.summary}</span>
+                            )}
+                          </span>
+                          <span className="section-meta">
+                            {section.has_comprehension_check && (
+                              <span className="badge badge--draft">quiz</span>
+                            )}
+                            <span className="section-chevron" aria-hidden="true">›</span>
+                          </span>
+                        </summary>
+                        <div className="lesson-body">
+                          <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                            {body}
+                          </ReactMarkdown>
+                        </div>
+                      </details>
+                    </li>
+                  );
+                }
+
+                // Fallback: non-expandable outline row
+                return (
+                  <li
+                    key={section.section_number}
                     style={{
-                      flexShrink: 0,
-                      fontFamily: "var(--font-mono)",
-                      fontSize: "0.78rem",
-                      fontWeight: 700,
-                      color: "var(--muted)",
-                      paddingTop: "0.15rem",
-                      minWidth: "2rem",
+                      display: "flex",
+                      gap: "1rem",
+                      padding: "0.9rem 0",
+                      borderBottom: isLast ? "none" : "1px solid var(--border)",
+                      alignItems: "flex-start",
                     }}
                   >
-                    {String(section.section_number).padStart(2, "0")}
-                  </span>
-                  <div>
-                    <p style={{ fontWeight: 600, color: "var(--ink)", fontSize: "0.95rem", marginBottom: section.summary ? "0.25rem" : 0 }}>
-                      {section.title}
-                    </p>
-                    {section.summary && (
-                      <p style={{ fontSize: "0.88rem", color: "var(--muted)", lineHeight: 1.6 }}>
-                        {section.summary}
-                      </p>
-                    )}
-                  </div>
-                  {section.has_comprehension_check && (
                     <span
-                      className="badge badge--draft"
-                      style={{ marginLeft: "auto", flexShrink: 0, alignSelf: "center" }}
+                      style={{
+                        flexShrink: 0,
+                        fontFamily: "var(--font-mono)",
+                        fontSize: "0.78rem",
+                        fontWeight: 700,
+                        color: "var(--muted)",
+                        paddingTop: "0.15rem",
+                        minWidth: "2rem",
+                      }}
                     >
-                      quiz
+                      {String(section.section_number).padStart(2, "0")}
                     </span>
-                  )}
-                </li>
-              ))}
+                    <div>
+                      <p style={{ fontWeight: 600, color: "var(--ink)", fontSize: "0.95rem", marginBottom: section.summary ? "0.25rem" : 0 }}>
+                        {section.title}
+                      </p>
+                      {section.summary && (
+                        <p style={{ fontSize: "0.88rem", color: "var(--muted)", lineHeight: 1.6 }}>
+                          {section.summary}
+                        </p>
+                      )}
+                    </div>
+                    {section.has_comprehension_check && (
+                      <span
+                        className="badge badge--draft"
+                        style={{ marginLeft: "auto", flexShrink: 0, alignSelf: "center" }}
+                      >
+                        quiz
+                      </span>
+                    )}
+                  </li>
+                );
+              })}
             </ol>
           </div>
         )}
@@ -186,7 +236,7 @@ export default function ModuleView() {
           </div>
         )}
 
-        {/* Sections-not-yet-authored notice — shown only when sections are missing */}
+        {/* Sections-not-yet-authored notice */}
         {(!mod.sections || mod.sections.length === 0) && (
           <div className="placeholder-notice" style={{ marginTop: "0.5rem" }}>
             Lesson sections are being authored. Outcomes and key concepts above
@@ -194,7 +244,7 @@ export default function ModuleView() {
           </div>
         )}
 
-        {/* References — collapsed by default */}
+        {/* References */}
         {mod.references && mod.references.length > 0 && (
           <div className="card" style={{ marginTop: "1rem" }}>
             <details>
