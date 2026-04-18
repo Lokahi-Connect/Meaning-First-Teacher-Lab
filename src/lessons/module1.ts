@@ -111,7 +111,7 @@ Consider these five words. Read the two descriptions side by side.
 |------|--------------------------|----------------------------------------|
 | *does* | Irregular: the \`<o>\` sounds like /ʊ/ | What is the grapheme \`<o>\` doing in this word? |
 | *sign / signal* | The \`<g>\` is silent in *sign* | Why does \`<g>\` appear in *sign*? What related words does it appear in? |
-| *love* | Irregular: the \`<o>\` sounds like /ʌ/ | What is the grapheme \`<ov>\` doing in this word family? |
+| *love* | Irregular: the \`<o>\` sounds like /ʌ/ | What is the grapheme \`<o>\` representing in this word? What function does the final \`<e>\` serve? |
 | *knowledge* | Silent \`<k>\`, silent \`<w>\` | What base does *knowledge* share with *knowing*? |
 | *muscle / muscular* | Silent \`<c>\` in *muscle* | Where does the \`<c>\` appear in a related word? |
 
@@ -367,13 +367,13 @@ For each word: what does the VCCV division obscure? What does the word sum revea
 
 ---
 
-## Syllabication as a Reading Tool
+## Morphological Analysis Is Primary
 
-Syllabication has a legitimate use: helping a reader pronounce an unfamiliar word aloud. For that narrow purpose, detecting syllable boundaries is useful.
+Syllabication is often promoted as a reading tool: divide an unfamiliar word into syllables and sound it out. But morphological analysis supports reading more directly — by making the base visible.
 
-But it is a one-function tool being used as if it were a spelling and meaning tool. Morphological analysis is a three-function tool: it supports reading, spelling, *and* vocabulary. A student who knows the base \`<sign>\` can read, spell, and understand every word in the \`<sign>\` family.
+A student who recognizes \`<sign>\` inside *signing*, *signal*, and *significant* can read all three words because they know the base. They don't need to process syllables — they see the meaningful unit they already know. A student taught to divide *sig·nal* loses that connection entirely.
 
-Syllabication cannot do this. It can only divide.
+Morphological analysis is the primary tool. It supports reading, spelling, and vocabulary from the same base of knowledge. Syllabication serves none of these as well as morphology does, and actively works against spelling and vocabulary by severing the visual identity of the base.
 
 ---
 
@@ -400,7 +400,7 @@ That is not a flaw in English spelling. That is the design.
 
 **Morphology** is the system of meaning units. The unit is the **morpheme**: the smallest meaningful element in a word. The morpheme \`<jump>\` is present in *jump*, *jumping*, *jumps*, *jumped*, *jumper*. It carries meaning — the concept of leaping — across every form.
 
-**Orthography** is the system of writing units. The unit is the **grapheme**: a letter or letter cluster that represents a sound within a specific word. In *jumped*, the grapheme \`<j>\` represents the initial consonant, \`<u>\` represents the vowel, \`<mp>\` represents the final cluster, and \`<ed>\` represents the past-tense suffix.
+**Orthography** is the system of writing units. The unit is the **grapheme**: a letter or letter cluster that represents a single phoneme within a specific word. In *jumped*, the graphemes within the base \`<jump>\` are \`<j>\` (representing /dʒ/), \`<u>\` (representing /ʌ/), \`<m>\` (representing /m/), and \`<p>\` (representing /p/). The \`<-ed>\` at the end is not a grapheme — it is the past-tense morpheme. Within that morpheme, \`<e>\` and \`<d>\` are individual graphemes.
 
 **Phonology** is the system of sound units. The unit is the **phoneme**: the smallest sound that creates a meaningful contrast. The phoneme /dʒ/ (the sound spelled \`<j>\`) distinguishes *jump* from *bump* and *dump*.
 
@@ -474,8 +474,8 @@ Now that you can distinguish morphology, orthography, and phonology, try placing
 Take the word *photography*:
 
 - **Morphological analysis**: photo + graph + y → photography (three morphemes)
-- **Orthographic analysis**: \`<ph>\`, \`<o>\`, \`<t>\`, \`<o>\`, \`<gr>\`, \`<a>\`, \`<ph>\`, \`<y>\` (graphemes)
-- **Phonological analysis**: /f/, /ə/, /t/, /ɒ/, /g/, /r/, /æ/, /f/, /i/ (phonemes)
+- **Orthographic analysis**: \`<ph>\`, \`<o>\`, \`<t>\`, \`<o>\`, \`<g>\`, \`<r>\`, \`<a>\`, \`<ph>\`, \`<y>\` (graphemes)
+- **Phonological analysis**: /f/, /ə/, /t/, /ɒ/, /g/, /r/, /ə/, /f/, /i/ (phonemes)
 
 Notice: the grapheme \`<ph>\` represents the phoneme /f/ twice in this word. The morphological analysis tells you *why* it appears twice: once in \`<photo>\` ("light") and once in \`<graph>\` ("write"). The morphology explains the orthography.
 
